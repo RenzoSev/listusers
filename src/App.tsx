@@ -15,6 +15,7 @@ function App() {
   const buildHandleSetModalUserIndex = (index: number) => {
     return () => {
       setCurIndex(index);
+      // @ts-expect-error implementation from DaisyUI.
       document.getElementById('my_modal_3').showModal();
     };
   };
