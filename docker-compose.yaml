@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: listusers
+
+    command: sleep infinity
+
+    ports:
+      - '5173:5173' # frontend
+
+    volumes:
+      - ./:/listusers
