@@ -1,19 +1,28 @@
-export interface CarouselCardProps {}
+import { UserDocument } from '../../Users/users.service';
 
-function Card(_props: CarouselCardProps) {
+export interface CarouselCardProps {
+  user: UserDocument;
+}
+
+function Card({
+  user: { email, firstName, lastName, img, phone },
+}: CarouselCardProps) {
   return (
     <div className="card w-96 glass">
-      <figure>
-        <img
-          src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          alt="car!"
-        />
+      <figure className="p-2">
+        <img src={img} alt={`${firstName} ${lastName} picture`} />
       </figure>
+
       <div className="card-body">
-        <h2 className="card-title">Life hack</h2>
-        <p>How to park your car at your garage?</p>
+        <h2 className="card-title">
+          {firstName} {lastName}
+        </h2>
+
+        <p>{phone}</p>
+        <p>{email}</p>
+
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Learn now!</button>
+          <button className="btn btn-primary">See details</button>
         </div>
       </div>
     </div>

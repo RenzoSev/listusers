@@ -18,20 +18,22 @@ function App() {
     fetchUsers();
   }, []);
 
+  console.log(users);
+
   return (
     <>
       <Carousel.Container>
         <Carousel.ItemsContainer>
-          {users?.map((_user, index) => (
-            <Carousel.Item index={index} key={index}>
-              <Carousel.Card />
+          {users?.map((user, index) => (
+            <Carousel.Item index={index} key={user.id}>
+              <Carousel.Card user={user} />
             </Carousel.Item>
           ))}
         </Carousel.ItemsContainer>
 
         <Carousel.IndicatorButtonsContainer>
-          {users?.map((_user, index) => (
-            <Carousel.IndicatorButton index={index} />
+          {users?.map((user, index) => (
+            <Carousel.IndicatorButton index={index} key={user.id} />
           ))}
         </Carousel.IndicatorButtonsContainer>
       </Carousel.Container>
