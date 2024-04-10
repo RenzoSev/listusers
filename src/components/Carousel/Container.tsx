@@ -1,6 +1,6 @@
-import { Children } from '../../types';
+import { PropsWithChildren } from 'react';
 
-export interface CarouselContainerProps extends Children {}
+export interface CarouselContainerProps extends PropsWithChildren {}
 
 function Container({ children }: CarouselContainerProps) {
   return (

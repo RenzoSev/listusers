@@ -2,10 +2,12 @@ import { UserDocument } from '../../Users/users.service';
 
 export interface CarouselCardProps {
   user: UserDocument;
+  handleSetModalUserIndex: () => void;
 }
 
 function Card({
   user: { email, firstName, lastName, img, phone },
+  handleSetModalUserIndex,
 }: CarouselCardProps) {
   return (
     <div className="card w-96 glass">
@@ -22,7 +24,9 @@ function Card({
         <p>{email}</p>
 
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">See details</button>
+          <button className="btn btn-primary" onClick={handleSetModalUserIndex}>
+            See details
+          </button>
         </div>
       </div>
     </div>
