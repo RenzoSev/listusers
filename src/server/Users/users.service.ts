@@ -88,13 +88,18 @@ export interface UserDocument {
 }
 
 export interface UsersContract {
-  getUsers: (length: number) => Promise<UserDocument[]>;
+  getUsers: (opts: Opts) => Promise<UserDocument[]>;
+}
+
+interface Opts {
+  length: number;
+  pathname: Window['location']['pathname'];
 }
 
 export class Users implements UsersContract {
   constructor(private readonly fetcher: AxiosStatic) {}
 
-  public parseUser(user: UserAPIResponse): UserDocument {
+  private parseUser(user: UserAPIResponse): UserDocument {
     return {
       id: user.login.uuid,
       email: user.email,
@@ -110,8 +115,22 @@ export class Users implements UsersContract {
     };
   }
 
-  public async getUsers(length: number) {
-    const url = `https://randomuser.me/api/?results=${length}`;
+  private buildUsersURL({ length, pathname }: Opts): string {
+    const baseurl = new URL('https://randomuser.me/api/');
+
+    this.isDebugMode(pathname) && baseurl.searchParams.append('seed', 'foobar');
+    baseurl.searchParams.append('results', String(length));
+
+    return baseurl.toString();
+  }
+
+  private isDebugMode(pathname: Window['location']['pathname']) {
+    return pathname === '/debug';
+  }
+
+  public async getUsers(opts: Opts) {
+    const url = this.buildUsersURL(opts);
+    console.log(url);
 
     const {
       data: { results: users },

@@ -24,7 +24,10 @@ function App() {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const users = await usersService.getUsers(length);
+      const users = await usersService.getUsers({
+        length,
+        pathname: window.location.pathname,
+      });
       setUsers(users);
     };
 
