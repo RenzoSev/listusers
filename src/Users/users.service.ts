@@ -80,6 +80,11 @@ export interface UserDocument {
   lastName: UserAPIResponse['name']['last'];
   email: UserAPIResponse['email'];
   phone: UserAPIResponse['phone'];
+  street: UserAPIResponse['location']['street']['name'];
+  streetNumber: UserAPIResponse['location']['street']['number'];
+  city: UserAPIResponse['location']['city'];
+  state: UserAPIResponse['location']['state'];
+  postcode: UserAPIResponse['location']['postcode'];
 }
 
 export interface UsersContract {
@@ -97,6 +102,11 @@ export class Users implements UsersContract {
       lastName: user.name.last,
       img: user.picture.large,
       phone: user.phone,
+      street: user.location.street.name,
+      streetNumber: user.location.street.number,
+      city: user.location.city,
+      state: user.location.state,
+      postcode: user.location.postcode,
     };
   }
 
