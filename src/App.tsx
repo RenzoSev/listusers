@@ -38,6 +38,8 @@ function App() {
       </Modal.Container>
 
       <Carousel.Container>
+        <h1 className="text-center text-4xl font-bold">LIST USERS</h1>
+
         <Carousel.ItemsContainer>
           {users.map((user, index) => (
             <Carousel.Item index={index} key={user.id}>
