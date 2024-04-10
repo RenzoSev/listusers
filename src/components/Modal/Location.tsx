@@ -16,7 +16,11 @@ function ModalLocation({ user }: ModalLocationProps) {
       </p>
       <p>
         <span className="font-bold">Street: </span>
-        {user.street} N{user.streetNumber}
+        {user.street}
+      </p>
+      <p>
+        <span className="font-bold">Street Number: </span>
+        {user.streetNumber}
       </p>
       <p>
         <span className="font-bold">State: </span>

@@ -3,6 +3,7 @@ import { UserDocument } from './Users/users.service';
 import { createUsersService } from './Users/users.factory';
 import * as Carousel from './components/Carousel';
 import * as Modal from './components/Modal';
+import * as Icons from './components/Icons';
 
 function App() {
   const [users, setUsers] = useState<UserDocument[]>([]);
@@ -39,10 +40,14 @@ function App() {
         <Carousel.ItemsContainer>
           {users.map((user, index) => (
             <Carousel.Item index={index} key={user.id}>
-              <Carousel.Card
-                user={user}
-                handleSetModalUserIndex={buildHandleSetModalUserIndex(index)}
-              />
+              <Carousel.Card user={user}>
+                <button
+                  className="btn btn-circle"
+                  onClick={buildHandleSetModalUserIndex(index)}
+                >
+                  <Icons.Information className="h-6 w-6" />
+                </button>
+              </Carousel.Card>
             </Carousel.Item>
           ))}
         </Carousel.ItemsContainer>

@@ -1,13 +1,13 @@
+import { PropsWithChildren } from 'react';
 import { UserDocument } from '../../Users/users.service';
 
-export interface CarouselCardProps {
+export interface CarouselCardProps extends PropsWithChildren {
   user: UserDocument;
-  handleSetModalUserIndex: () => void;
 }
 
 function Card({
   user: { email, firstName, lastName, img, phone },
-  handleSetModalUserIndex,
+  children,
 }: CarouselCardProps) {
   return (
     <div className="card w-96 glass">
@@ -23,11 +23,7 @@ function Card({
         <p>{phone}</p>
         <p>{email}</p>
 
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary" onClick={handleSetModalUserIndex}>
-            See details
-          </button>
-        </div>
+        <div className="card-actions justify-end">{children}</div>
       </div>
     </div>
   );
