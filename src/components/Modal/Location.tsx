@@ -1,4 +1,4 @@
-import { UserDocument } from '../../Users/users.service';
+import { UserDocument } from '../../server/Users/users.service';
 
 export interface ModalLocationProps {
   user: UserDocument;

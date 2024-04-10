@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { UserDocument } from './Users/users.service';
-import { createUsersService } from './Users/users.factory';
+import { UserDocument } from './server/Users/users.service';
+import { createUsersService } from './server/Users/users.factory';
 import * as Carousel from './components/Carousel';
 import * as Modal from './components/Modal';
 import * as Icons from './components/Icons';

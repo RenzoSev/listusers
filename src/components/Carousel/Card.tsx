@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { UserDocument } from '../../Users/users.service';
+import { UserDocument } from '../../server/Users/users.service';
 
 export interface CarouselCardProps extends PropsWithChildren {
   user: UserDocument;
