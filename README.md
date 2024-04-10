@@ -21,7 +21,6 @@ npm run dev
 ```
 
 # Dependencies
-
 - TypeScript
 - SWC (Rust Transpiler)
 - Vite
@@ -29,3 +28,4 @@ npm run dev
 - TailwindCSS
 - DaisyUI
 - Axios
+- React Icon
