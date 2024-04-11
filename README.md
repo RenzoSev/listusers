@@ -46,7 +46,13 @@ git clone https://github.com/RenzoSev/listusers.git
 cd listusers
 ```
 
-### IMPORTANT2: to successfully run cypress tests, you must run the app before running them.
+#### The APP will be available at (for both installations):
+
+  ➜  Local:   http://localhost:5173/
+
+  ➜  Network: http://172.18.0.2:5173/
+
+#### IMPORTANT2: to successfully run cypress tests, you must run the app before running them.
 
 ## Docker
 Inside the project, run the following command or the correspondents for: build Dockerfile and run Docker Compose.
