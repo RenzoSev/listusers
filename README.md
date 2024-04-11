@@ -1,13 +1,17 @@
 # About the project
 This is a project which lists users randomly generated with [randomuser.me](https://randomuser.me/documentation).
 
-This app has E2E tests and 100% coverage (more details below).
+This app has E2E tests and 100% coverage:
+![image](https://github.com/RenzoSev/listusers/assets/73757018/31a23f56-7ca1-4a8e-b119-bff57445bfbc)
 
 The users are rendered within a carousel. The app currently renders 15 random users.
+![1](https://github.com/RenzoSev/listusers/assets/73757018/4f956bfd-6ee8-49ef-a416-acfd6d197c59)
 
 The app also includes a modal with adress details for it user:
+![2](https://github.com/RenzoSev/listusers/assets/73757018/a566382a-0a27-43b3-8664-62e29ee61147)
 
 ## Demo
+https://github.com/RenzoSev/listusers/assets/73757018/f66f2e5c-0ae8-4349-a905-87776f24df06
 
 ## Debug
 Sometimes, the randomization could be a problem. The app supports a fix renderization of users by acessing `/debug`.
