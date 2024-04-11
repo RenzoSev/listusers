@@ -4,7 +4,7 @@ import istanbul from 'vite-plugin-istanbul';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/listusers',
+  base: 'https://renzosev.github.io/listusers/',
   plugins: [
     react(),
     istanbul({
