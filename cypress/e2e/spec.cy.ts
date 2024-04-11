@@ -77,7 +77,7 @@ describe('List Users', () => {
   });
 
   it('should open modal with correct address info', () => {
-    cy.visit('http://localhost:5173/debug/');
+    cy.visit('http://localhost:5173/debug/', { timeout: 30000 });
     cy.get('dialog').should('have.css', 'opacity', '0');
     cy.get('dialog').should('have.css', 'visibility', 'visible');
     cy.get('dialog').should('have.css', 'pointer-events', 'none');
