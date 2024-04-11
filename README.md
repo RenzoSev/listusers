@@ -21,6 +21,8 @@ Inside the project, run the following command or the correspondents for: build D
 
 ***IMPORTANT: you won't be able to run the Cypress UI within the docker. Therefore, the current docker supports running the Cypress Run, which should be enough for now since you can check the tests passing and also the coverage which is at 100% for now.***
 
+**IMPORTANT2: to successfully run cypress tests, you must run the app before running them.**
+
 ```
 docker buildx build .
 docker-compose up -d
@@ -54,7 +56,7 @@ npm run dev
 npm run cy:run
 ```
 
-The coverage will automatically be outputed in your terminal by doing this command, but feel free to check in your browser the result by opening the file `listusers/coverage/lcov-report/index.html`.
+Feel free to check in your browser the coverage result by opening the file `listusers/coverage/lcov-report/index.html`.
 
 ## Locally
 To run the project locally, you have to install the dependencies for your OS. Feel free to check the related dependencies of this project in the Dependencies section. Therefore, the most necessary might be NVM/Node and Cypress. Both of them have their own step guide.
@@ -74,8 +76,8 @@ To run the project locally, you have to install the dependencies for your OS. Fe
 ### Running the tests:
 Please, do not forget to install the Cypress dependencies. Otherwise, you won't be able to run it properly.
 
-`npm cy:run` it will run the tests on the terminal.
-`npm cy:open` it will open the Cypress UI.
+`npm cy:run` it will run the tests on the terminal. Feel free to check in your browser the coverage result by opening the file `listusers/coverage/lcov-report/index.html`
+`npm cy:open` it will open the Cypress UI. It is possible to check the coverage there.
 
 
 # Dependencies
