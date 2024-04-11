@@ -125,7 +125,7 @@ export class Users implements UsersContract {
   }
 
   private isDebugMode(pathname: Window['location']['pathname']) {
-    return pathname === '/debug';
+    return pathname.includes('debug');
   }
 
   public async getUsers(opts: Opts) {
