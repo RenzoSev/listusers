@@ -1,5 +1,6 @@
 {
   "name": "listusers",
+  "deploy": "gh-pages -d dist",
   "private": true,
   "version": "0.0.0",
   "type": "module",
