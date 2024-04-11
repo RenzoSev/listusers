@@ -44,12 +44,12 @@ git clone https://github.com/RenzoSev/listusers.git
 cd listusers
 ```
 
+### IMPORTANT2: to successfully run cypress tests, you must run the app before running them.
+
 ## Docker
 Inside the project, run the following command or the correspondents for: build Dockerfile and run Docker Compose.
 
 ***IMPORTANT: you won't be able to run the Cypress UI within the docker. Therefore, the current docker supports running the Cypress Run, which should be enough for now since you can check the tests passing and also the coverage which is at 100% for now.***
-
-**IMPORTANT2: to successfully run cypress tests, you must run the app before running them.**
 
 ```
 docker buildx build .
