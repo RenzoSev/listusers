@@ -1,3 +1,6 @@
+# Live Site
+https://renzosev.github.io/listusers/
+
 # About the project
 This is a project which lists users randomly generated with [randomuser.me](https://randomuser.me/documentation).
 
@@ -15,6 +18,8 @@ https://github.com/RenzoSev/listusers/assets/73757018/f66f2e5c-0ae8-4349-a905-87
 
 ## Debug
 Sometimes, the randomization could be a problem. The app supports a fix renderization of users by acessing `/debug`.
+
+**IMPORTANT:** Debug mode won't work in Live Mode.
 
 # Installing
 
