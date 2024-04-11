@@ -1,6 +1,6 @@
 describe('List Users', () => {
   it('should render initial page', () => {
-    cy.visit('http://localhost:5173/');
+    cy.visit('http://localhost:5173/listusers');
 
     cy.contains('LIST USERS').should('have.length', 1);
 
@@ -28,7 +28,7 @@ describe('List Users', () => {
   });
 
   it('should use carousel', () => {
-    cy.visit('http://localhost:5173/');
+    cy.visit('http://localhost:5173/listusers');
 
     cy.get('a').eq(0).click();
     cy.url().should('include', '#item0');
@@ -77,7 +77,7 @@ describe('List Users', () => {
   });
 
   it('should open modal with correct address info', () => {
-    cy.visit('http://localhost:5173/debug/', { timeout: 30000, failOnStatusCode: false });
+    cy.visit('http://localhost:5173/listusers/debug/');
     cy.get('dialog').should('have.css', 'opacity', '0');
     cy.get('dialog').should('have.css', 'visibility', 'visible');
     cy.get('dialog').should('have.css', 'pointer-events', 'none');
