@@ -14,8 +14,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          project: ./site
           browser: chrome
-          build: npm install
+          build: npm run build
           start: npx vite --host
           wait-on: "http://localhost:5173"
